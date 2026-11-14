@@ -73,8 +73,8 @@ a{color:var(--red-text)}
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#1E1A19;border-bottom:3px solid var(--yel);
   margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)));
   padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
-.nav .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:thin}
-.nav a{white-space:nowrap;text-decoration:none;color:#E8E0DC;font-size:.85rem;font-weight:600;padding:14px 12px;border-bottom:3px solid transparent;margin-bottom:-3px}
+.nav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:0 2px;overflow:visible}
+.nav a{white-space:nowrap;text-decoration:none;color:#E8E0DC;font-size:.85rem;font-weight:600;padding:12px 10px;border-bottom:3px solid transparent;margin-bottom:-3px}
 .nav a:hover,.nav a:focus-visible{color:var(--yel);outline:none}
 
 section{padding:48px 0 8px}
@@ -281,6 +281,9 @@ h2:after{content:"";display:block;width:56px;height:4px;background:var(--yel);bo
 .pvc ol{margin:0;padding-left:1.2em;font-size:.84rem}
 #cifras .pv td{color:var(--ink)}
 /* /PV */
+/* NAVFIX */
+@media (max-width:760px){.nav{position:static}.nav a{font-size:.8rem;padding:9px 8px}}
+/* /NAVFIX */
 details{border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:10px 0}
 summary{cursor:pointer;font-weight:600;padding:12px 0}
 summary:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
